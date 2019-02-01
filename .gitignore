@@ -6,4 +6,4 @@ haters/
 .next/
 .build/
 layout.md
-variables.env
+.env
