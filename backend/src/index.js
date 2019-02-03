@@ -11,7 +11,7 @@ const server = createServer()
 
 server.start({
     cors: {
-        crednetials: true,
+        credentials: true,
         origin: process.env.FRONTEND_URL
     },
 }, deets => {

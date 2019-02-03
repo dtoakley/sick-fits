@@ -1,6 +1,6 @@
-import withApollo from 'next-with-apollo';
-import ApolloClient from 'apollo-boost';
-import { endpoint } from '../config';
+import withApollo from 'next-with-apollo'
+import ApolloClient from 'apollo-boost'
+import { endpoint } from '../config'
 
 function createClient({ headers }) {
   return new ApolloClient({
@@ -13,7 +13,7 @@ function createClient({ headers }) {
         headers,
       });
     },
-  });
+  })
 }
 
-export default withApollo(createClient);
+export default withApollo(createClient)
