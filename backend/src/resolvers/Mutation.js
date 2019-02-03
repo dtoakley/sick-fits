@@ -9,6 +9,19 @@ const Mutations = {
         }, info)
 
         return item
+    },
+
+    updateItem(parent, args, context, info) {
+        const updateData = { ...args }
+
+        delete updateData.id
+
+        return context.db.mutation.updateItem({
+            data: updateData,
+            where: {
+                id: args.id
+            }
+        }, info)
     }
 };
 
