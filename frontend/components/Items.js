@@ -5,7 +5,7 @@ import styled from 'styled-components'
 
 import Item from '../components/Item'
 
-const ALL_ITEMS_QUERY = gql`
+const GET_ITEMS_QUERY = gql`
     query ALL_ITEMS_QUERY {
         items {
             id
@@ -36,7 +36,7 @@ class Items extends Component {
     render() {
         return (
             <Center>
-                <Query query={ALL_ITEMS_QUERY}>
+                <Query query={GET_ITEMS_QUERY}>
                     {({ data, error, loading }) => {
                         if (loading) return <p>Loading..</p>
                         if (error) return <p> Error: { error.message }</p>
@@ -55,4 +55,4 @@ class Items extends Component {
 }
 
 export default Items
-export { ALL_ITEMS_QUERY }
+export { GET_ITEMS_QUERY }
