@@ -1,13 +1,11 @@
 import React from 'react';
-import { Query } from 'react-apollo'
+import { Query, Mutation } from 'react-apollo'
 import gql from 'graphql-tag'
 
 import ErrorMessage from './ErrorMessage'
 import Table from './styles/Table'
 import { possiblePermissions } from '../config'
 import PermissionsUser from './PermissionsUser'
-
-
 
 const GET_USERS_QUERY = gql`
     query GET_USERS_QUERY {
@@ -19,7 +17,6 @@ const GET_USERS_QUERY = gql`
         }
     }
 `
-
 
 const Permissions = props => (
     <Query query={GET_USERS_QUERY}>
@@ -33,12 +30,16 @@ const Permissions = props => (
                             <tr>
                                 <th>Name</th>
                                 <th>Email</th>
-                                {possiblePermissions.map(permission => <th>{permission}</th>)}
+                                {possiblePermissions.map(permission => <th key={permission}>{permission}</th>)}
                                 <th>👇</th>
                             </tr>
                         </thead>
                         <tbody>
-                            {data.users.map(user => <PermissionsUser user={user}/>)}
+                            {data.users.map(user => <PermissionsUser
+                                key={user.id}
+                                user={user}
+                                />
+                            )}
                         </tbody>
                     </Table>
                 </div>

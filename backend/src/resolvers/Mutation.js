@@ -4,6 +4,7 @@ const { randomBytes } = require('crypto')
 const { promisify } = require('util')
 
 const { transport, makeAnEmail } = require('../mail')
+const { hasPermissions } = require('../utils')
 
 const Mutations = {
     async createItem(parent, args, context, info) {
@@ -146,6 +147,27 @@ const Mutations = {
 
         generateAndSetJwtToken(updatedUser.id, context)
         return updatedUser
+    },
+
+    async updateUserPermissions(parent, args, context, info) {
+        if (!context.request.userId) {
+            throw new Error('You must be logged in!')
+        }
+
+        const currentUser = await context.db.query.user({ where: { id: context.request.userId }}, info)
+
+        hasPermissions(currentUser, ['ADMIN', 'PERMISSION_UPDATE'])
+
+        return context.db.mutation.updateUser({
+            where: {
+                id: args.userId
+            },
+            data: {
+                permissions: {
+                    set: args.permissions
+                }
+            }
+        }, info)
     }
 }
 
