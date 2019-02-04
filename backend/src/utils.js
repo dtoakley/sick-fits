@@ -10,8 +10,8 @@ function hasPermission(user, permissionsNeeded) {
       You Have:
 
       ${user.permissions}
-      `);
+      `)
   }
 }
 
-exports.hasPermission = hasPermission;
+exports.hasPermission = hasPermission
