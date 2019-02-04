@@ -1,11 +1,8 @@
 import React, {Component} from 'react'
-import PropTypes from 'prop-types'
 import { Query, Mutation } from 'react-apollo'
 import gql from 'graphql-tag'
-import Router from 'next/router'
 
 import Form from './styles/Form'
-import formatMoney from '../lib/formatMoney'
 import ErrorMessage from './ErrorMessage'
 
 
