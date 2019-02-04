@@ -3,6 +3,8 @@ const jwt = require('jsonwebtoken')
 const { randomBytes } = require('crypto')
 const { promisify } = require('util')
 
+const { transport, makeAnEmail } = require('../mail')
+
 const Mutations = {
     async createItem(parent, args, context, info) {
         //TODO - check if user is logged in
@@ -95,6 +97,16 @@ const Mutations = {
             data: { resetToken, resetTokenExpiry }
         })
 
+        const mailResponse = await transport.sendMail({
+            from: 'd.lewistoakley@gmail.com',
+            to: user.email,
+            subject: 'Reset your password',
+            html: makeAnEmail(`Your password reset link is: \n\n 
+            <a href="${process.env.FRONTEND_URL}/password_reset?resetToken=${resetToken}">
+            Click here to reset your password</a>`
+            )
+        })
+
         return { message: 'Check your email for a link to reset your password.'}
 
     },
@@ -110,8 +122,6 @@ const Mutations = {
                 resetTokenExpiry_gte: Date.now() - 3600000,
             }
         })
-        console.log(user)
-        console.log(args.resetToken)
 
         if (!user) {
             throw new Error('This token is either invalid or expired!')
