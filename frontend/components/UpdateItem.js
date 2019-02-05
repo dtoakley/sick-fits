@@ -57,8 +57,6 @@ class UpdateItem extends Component {
                 ...this.state,
             }
         })
-
-        console.log(response)
     }
 
     render() {
