@@ -71,3 +71,4 @@ class ItemDetails extends Component {
 }
 
 export default ItemDetails;
+export { ITEM_DETAILS_QUERY }
