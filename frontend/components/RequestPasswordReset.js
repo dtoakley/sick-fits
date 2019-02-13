@@ -36,6 +36,7 @@ class RequestPasswordReset extends Component {
             >
                 {(requestPasswordReset, {error, loading, called}) => (
                     <Form
+                        data-test="form"
                         method="post"
                         onSubmit={async event => {
                             event.preventDefault()
@@ -68,3 +69,4 @@ class RequestPasswordReset extends Component {
 
 
 export default RequestPasswordReset;
+export { REQUEST_PASSWORD_RESET_MUTATION }

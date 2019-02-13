@@ -7,8 +7,8 @@ const testItem = {
     title: 'A Cool Item',
     price: 4000,
     description: 'This item is really cool!',
-    image: 'dog.jpg',
-    largeImage: 'largedog.jpg',
+    image: 'image.jpg',
+    largeImage: 'large-image.jpg',
 }
 
 

@@ -14,19 +14,19 @@ exports[`<ItemDetails /> Errors with a not found item 1`] = `
 exports[`<ItemDetails /> renders with proper data 1`] = `
 <h2>
   Viewing 
-  dogs are best
+  Some title
 </h2>
 `;
 
 exports[`<ItemDetails /> renders with proper data 2`] = `
 <img
-  alt="dogs are best"
-  src="dog.jpg"
+  alt="Some title"
+  src="image-large.jpg"
 />
 `;
 
 exports[`<ItemDetails /> renders with proper data 3`] = `
 <p>
-  dogs
+  Some Description
 </p>
 `;

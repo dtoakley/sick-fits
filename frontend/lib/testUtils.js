@@ -8,10 +8,10 @@ const testItem = () => ({
   id: 'abc123',
   price: 5000,
   user: null,
-  image: 'dog-small.jpg',
-  title: 'dogs are best',
-  description: 'dogs',
-  largeImage: 'dog.jpg',
+  image: 'image.jpg',
+  title: 'Some title',
+  description: 'Some Description',
+  largeImage: 'image-large.jpg',
 });
 
 const testUser = () => ({
