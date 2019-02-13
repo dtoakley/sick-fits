@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for frontend/components/Cart.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">All files</a> / <a href="index.html">frontend/components</a> Cart.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>13/13</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">83.33% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>5/6</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>6/6</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>12/12</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react'
+import { Query, Mutation } from 'react-apollo'
+import gql from 'graphql-tag'
+import { adopt } from 'react-adopt'
+&nbsp;
+import CartStyles from './styles/CartStyles'
+import Supreme from './styles/Supreme'
+import CloseButton from './styles/CloseButton'
+import SickButton from './styles/SickButton'
+import User from './User'
+import CartItem from './CartItem'
+import formatMomney from '../lib/formatMoney'
+import calcItemPrice from '../lib/calcTotalPrice'
+import ChargeCustomer from './ChargeCustomer'
+&nbsp;
+const LOCAL_STATE_QUERY = gql`
+    query LOCAL_STATE_QUERY {
+        cartOpen @client
+    }
+`
+&nbsp;
+const TOGGLE_CART_MUTATION = gql`
+    mutation TOGGLE_CART_MUTATION {
+        toggleCart @client
+    }
+`
+&nbsp;
+const Composed = adopt({
+    user: ({ render }) =&gt; &lt;User&gt;{render}&lt;/User&gt;,
+    toggleCart: ({ render }) =&gt; &lt;Mutation mutation={TOGGLE_CART_MUTATION}&gt;{render}&lt;/Mutation&gt;,
+    localState: ({ render }) =&gt; &lt;Query query={LOCAL_STATE_QUERY}&gt;{render}&lt;/Query&gt;,
+})
+&nbsp;
+const Cart = () =&gt; (
+    &lt;Composed&gt;
+        {({ user, toggleCart, localState }) =&gt; {
+            const me = user.data.me
+            if (!me) return null
+            return (
+                &lt;CartStyles open={localState.data.cartOpen}&gt;
+                    &lt;header&gt;
+                        &lt;CloseButton onClick={toggleCart} title="close"&gt;
+                            &amp;times;
+                        &lt;/CloseButton&gt;
+                        &lt;Supreme&gt;{me.name}'s Cart&lt;/Supreme&gt;
+                        &lt;p&gt;You have {me.cart.length} item{me.cart.length === 1 ? '' : <span class="branch-1 cbranch-no" title="branch not covered" >'s'}</span> in your cart.&lt;/p&gt;
+                    &lt;/header&gt;
+                    &lt;ul&gt;
+                        {me.cart.map(cartItem =&gt; &lt;CartItem key={cartItem.id} cartItem={cartItem}/&gt;)}
+                    &lt;/ul&gt;
+                    &lt;footer&gt;
+                        &lt;p&gt;{formatMomney(calcItemPrice(me.cart))}&lt;/p&gt;
+                        {me.cart.length &amp;&amp; (
+                            &lt;ChargeCustomer&gt;
+                                &lt;SickButton&gt;Checkout&lt;/SickButton&gt;
+                            &lt;/ChargeCustomer&gt;
+                        )}
+                    &lt;/footer&gt;
+                &lt;/CartStyles&gt;
+            )
+        }}
+    &lt;/Composed&gt;
+)
+&nbsp;
+export default Cart
+export { LOCAL_STATE_QUERY, TOGGLE_CART_MUTATION }
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed Feb 13 2019 17:39:53 GMT-0500 (EST)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

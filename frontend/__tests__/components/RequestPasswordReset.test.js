@@ -17,7 +17,6 @@ const mocks = [
     },
 ]
 
-
 describe('<RequestPasswordReset />', () => {
     it('Renders and matches snapshot', async () => {
         const wrapper = mount(
