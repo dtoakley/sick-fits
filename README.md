@@ -11,13 +11,17 @@ You can see a demo of the application [here](https://dtoakley-sick-fits-next-pro
 $ cd path/to/sick-fits/frontend
 $ npm install
 $ npm run dev
+```
 
-# open new terminal window
+Open new terminal window
 
+```
 $ cd path/to/sick-fits/backend
 $ npm install
 $ npm run dev
 ```
+
+Then open your browser of choice at [http://localhost:7777](http://localhost:7777) 
 
 ### To Run tests
 
